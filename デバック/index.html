@@ -1,0 +1,37 @@
+<html>
+
+    <script type="text/javascript">
+        function toOneDimension( $previousValue, $currentValue ) {
+            console.log(1);
+            return $currentValue.concat($previousValue);
+            /*関数　$previousValue　$currentValueを一つの配列に結合*/
+        } 
+        console.log(2);
+        
+        var $sampleArrayA = [
+           /*[0]*/ [ 'A1', 'A2', 'A3' ],
+           /*[1]*/ [ 'B1', 'B2', 'B3' ],
+           /*[2]*/ [ 'C1', 'C2', 'C3' ]
+        ]; /*配列A*/
+        console.log(3);
+
+        var $sampleArrayB = $sampleArrayA.reduce( toOneDimension );
+        //$previousValueに配列要素([0],[1]...)を順番に処理して行ったものが格納,$currentValueは要素を意味する。
+        console.log(4);
+        
+       // console.log($sampleArrayA);
+        //console.log($sampleArrayB);
+        
+        for ( var $counterVar = 0; $counterVar < $sampleArrayB.length; $counterVar++ ) {  /*$sampleArrayB.lengtは長さ=9*/
+         console.log(5);
+               document.write( '$sampleArrayB['+$counterVar+']: ' );
+                document.write( $sampleArrayB[$counterVar] );
+                document.write( '<br/>' );
+                
+        }
+        console.log(6);
+        
+        
+    </script>
+    
+</html>
